@@ -65,6 +65,7 @@ int GuessGame ()
 
 int main (){
     GuessGame();
+    //BMICalculator();
     return 0;
 }
 
