@@ -52,7 +52,7 @@ int GuessGame ()
    cout << "Please guess the number: ";
    cin >> GuesedVariable;
 
-   (VariableToGuess == GuesedVariable)?cout<< "Congratulations!"<< endl:cout << "Wrong! Please try again!";
+   (VariableToGuess == GuesedVariable)?cout<< "Congratulations!"<< endl:cout << "Wrong! Please try again!";//ternary operator: conditie ?(then) behaviour :(else) behaviour
 
    /*if (VariableToGuess == GuesedVariable)
     cout<< "Congratulations!"<< endl;
