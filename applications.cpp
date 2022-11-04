@@ -47,24 +47,17 @@ int GuessGame ()
     cout <<"Enter your data: ";
     cin >> VariableToGuess;
     
-   std::system("cls");
+   std::system("cls"); //pentru a sterge ce am introdus de la tastatura
 
    cout << "Please guess the number: ";
    cin >> GuesedVariable;
 
-   if (VariableToGuess == GuesedVariable)
+   (VariableToGuess == GuesedVariable)?cout<< "Congratulations!"<< endl:cout << "Wrong! Please try again!";
+
+   /*if (VariableToGuess == GuesedVariable)
     cout<< "Congratulations!"<< endl;
    else
-    while(VariableToGuess != GuesedVariable)
-   {
-        cout << "Please guess the number: ";
-        cin >> GuesedVariable;
-
-            if (VariableToGuess == GuesedVariable)
-                cout<< "Congratulations!"<< endl;
-                break;
-        
-   }    
+    cout << "Wrong! Please try again!";   */
 
    return 0;
     
