@@ -91,6 +91,7 @@ int CalculatorApp()
     }
     return 0; 
 }
+
 int DayMonth()
 {
     int Year;
@@ -122,11 +123,27 @@ int DayMonth()
      }  
 
 }
+
+int WhileLoop()
+{
+    int counter = 100;
+
+    while (counter <= 500)
+    {
+        if(counter % 3 == 0 && counter % 5 == 0)
+            cout << counter << " is divisible" << endl;
+        counter++;
+    }
+
+}
+
 int main (){
     //GuessGame();
     //BMICalculator();
     //CalculatorApp();
-    DayMonth();
+    //DayMonth();
+    WhileLoop();
+
     return 0;
 }
 
