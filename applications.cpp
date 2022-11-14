@@ -137,12 +137,17 @@ int WhileLoop()
 
 }
 
+int CountDigitsContain()
+{
+
+}
+
 int main (){
     //GuessGame();
     //BMICalculator();
     //CalculatorApp();
     //DayMonth();
-    WhileLoop();
+    //WhileLoop();
 
     return 0;
 }
