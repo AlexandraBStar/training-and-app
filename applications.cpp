@@ -89,10 +89,7 @@ int CalculatorApp()
         break;
 
     }
-    
-
     return 0; 
-   
 }
 
 int main (){
