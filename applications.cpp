@@ -139,7 +139,26 @@ int WhileLoop()
 
 int CountDigitsContain()
 {
+        int32_t Number;
+        
+        cout << "Please insert the number: ";
+        cin >> Number;
 
+        if (Number == 0)
+            cout<< "You have entered 0 value";
+        else {
+            if(Number < 0)
+            {
+                Number = Number *(-1);
+            }
+            int counter = 0;
+            while(Number > 0)
+            {
+                Number /= 10;
+                counter ++;
+            }
+        cout << "Number contains: " << counter << " digits" << endl;
+            }
 }
 
 int main (){
@@ -148,6 +167,7 @@ int main (){
     //CalculatorApp();
     //DayMonth();
     //WhileLoop();
+    CountDigitsContain();
 
     return 0;
 }
