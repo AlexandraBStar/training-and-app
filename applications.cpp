@@ -54,18 +54,51 @@ int GuessGame ()
 
    (VariableToGuess == GuesedVariable)?cout<< "Congratulations!"<< endl:cout << "Wrong! Please try again!";//ternary operator: conditie ?(then) behaviour :(else) behaviour
 
-   /*if (VariableToGuess == GuesedVariable)
-    cout<< "Congratulations!"<< endl;
-   else
-    cout << "Wrong! Please try again!";   */
-
    return 0;
     
 }
 
+int CalculatorApp()
+{
+    float NumberOne, NumberTwo;
+    char operation;
+
+    cout <<"Welcome to your Calculator app" << endl;
+    cout << "______________________________"<< endl;
+
+    cout << "Please enter your first number, the operation you need and the second number: "<<endl;
+    cin >> NumberOne >> operation >> NumberTwo;
+
+    switch (operation)
+    {
+        case '-': cout<<NumberOne<<operation<<NumberTwo<<"="<<NumberOne - NumberTwo;break;
+        case '+': cout<<NumberOne<<operation<<NumberTwo<<"="<<NumberOne + NumberTwo;break;
+        case '*': cout<<NumberOne<<operation<<NumberTwo<<"="<<NumberOne * NumberTwo;break;
+        case '/': cout<<NumberOne<<operation<<NumberTwo<<"="<<NumberOne / NumberTwo;break;
+        case '%': 
+            bool isNumberOneInt, isNumberTwoInt;
+            isNumberOneInt = ((int)NumberOne == NumberOne);
+            isNumberTwoInt = ((int)NumberTwo == NumberTwo);
+
+            if(isNumberOneInt && isNumberTwoInt)
+                cout<<NumberOne<<operation<<NumberTwo<<"="<<(int)NumberOne % (int)NumberTwo;
+            else
+                cout << "Not valid"; 
+            break;
+        default: cout << "The operations is not in calculator app"<<endl;
+        break;
+
+    }
+    
+
+    return 0; 
+   
+}
+
 int main (){
-    GuessGame();
+    //GuessGame();
     //BMICalculator();
+    CalculatorApp();
     return 0;
 }
 
