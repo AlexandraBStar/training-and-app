@@ -91,11 +91,42 @@ int CalculatorApp()
     }
     return 0; 
 }
+int DayMonth()
+{
+    int Year;
+    int Month;
+    cout <<"Welcome to your Month app calculator" << endl;
+    cout << "______________________________"<< endl;
 
+    cout <<"Add year: ";
+    cin >> Year;
+    cout <<"Add Month: ";
+    cin >> Month;
+
+     switch (Month)
+     {
+        case 2:(Year % 4 == 0 && Year % 100 !=0 || Year % 400 == 0)?cout << "29 days":cout << "28 days";break;
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:cout<<"31 days";break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:cout<<"30 days";break;
+        default: cout << "Month not recognised"<<endl;
+        break;
+     }  
+
+}
 int main (){
     //GuessGame();
     //BMICalculator();
-    CalculatorApp();
+    //CalculatorApp();
+    DayMonth();
     return 0;
 }
 
