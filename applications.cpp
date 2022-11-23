@@ -181,6 +181,32 @@ int ReversingNumber ()
 
     return 0;
 }
+
+int PINverification()
+{
+    int UserPin = 1234;
+    int Pin;
+    int errorCounter = 0;
+
+    cout << "Insert PIN: ";
+    cin >> Pin;
+
+    do{
+        cout << "Insert PIN: ";
+        cin >> Pin;
+        if(Pin !=UserPin)
+            errorCounter++;
+        
+    }while (errorCounter < 3 && Pin != UserPin);
+
+    if(errorCounter < 3)
+        cout << "Application loading!";
+    else
+        cout << "Account blocked for 3h!";
+    return 0;
+
+}
+
 int main (){
     //GuessGame();
     //BMICalculator();
@@ -188,7 +214,8 @@ int main (){
     //DayMonth();
     //WhileLoop();
     //CountDigitsContain();
-    ReversingNumber();
+    //ReversingNumber();
+    PINverification();
 
     return 0;
 }
