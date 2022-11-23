@@ -161,13 +161,34 @@ int CountDigitsContain()
             }
 }
 
+int ReversingNumber ()
+{
+    int Number;
+    int ReversedNumber = 0;
+    int counter;
+    cout<< "Enter your number here: ";
+    cin >> Number;
+
+    while(Number > 0)
+    {
+        ReversedNumber *=10; 
+        int LastDigit = Number % 10;
+        ReversedNumber += LastDigit;
+        Number /=10;
+    }
+
+    cout<<"Reversed Number is: "<<ReversedNumber;
+
+    return 0;
+}
 int main (){
     //GuessGame();
     //BMICalculator();
     //CalculatorApp();
     //DayMonth();
     //WhileLoop();
-    CountDigitsContain();
+    //CountDigitsContain();
+    ReversingNumber();
 
     return 0;
 }
