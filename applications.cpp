@@ -188,9 +188,6 @@ int PINverification()
     int Pin;
     int errorCounter = 0;
 
-    cout << "Insert PIN: ";
-    cin >> Pin;
-
     do{
         cout << "Insert PIN: ";
         cin >> Pin;
