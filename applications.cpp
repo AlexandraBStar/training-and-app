@@ -183,6 +183,7 @@ int ReversingNumber ()
 }
 
 int PINverification()
+
 {
     int UserPin = 1234;
     int Pin;
@@ -204,6 +205,23 @@ int PINverification()
 
 }
 
+int Factorial () {
+
+    int number;
+    cout<<"Insert your number: ";
+    cin >> number;
+
+    int result =1;
+
+
+     for (int i=1;i<=number;i++)
+     {
+        result = result * i;
+     }
+    
+    cout <<result;
+}
+
 int main (){
     //GuessGame();
     //BMICalculator();
@@ -212,7 +230,8 @@ int main (){
     //WhileLoop();
     //CountDigitsContain();
     //ReversingNumber();
-    PINverification();
+    //PINverification();
+    Factorial();
 
     return 0;
 }
